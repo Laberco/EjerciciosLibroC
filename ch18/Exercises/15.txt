@@ -1,0 +1,2 @@
+Storage duration,  ya que las variables con automatic storage duration no tiene 
+un valor inicial por defecto

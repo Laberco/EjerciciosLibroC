@@ -1,0 +1,27 @@
+The following function calls supposedly write a single new-line character, but some are
+incorrect. Identify which calls don't work and explain why.
+
+(a) printf("%c", '\n');         (g) putchar('\n');
+(b) printf("%c", "\n");         (h) putchar("\n");
+(c) printf("%s", '\n');         (i) puts('\n');
+(d) printf("%s", "\n");         (j) puts("\n");
+(e) printf('\n');               (k) puts(" ");
+(f) printf("\n");
+
+(a): De esta forma, '\n' es un caracter constante el cual esta representado
+por un entero de un valor que se corresponde con el codigo numerico del caracter
+
+(b): No funiona, ya que "\n" es un string litteral y salta un error ya que
+printf espera una variable, no un string
+(c): Da fallo ya que printf espera un string y nosotros le proporcionamos
+un caracter.
+(d): printf espera un puntero tipo char(un string) y "\n" se guarda como
+un array que contiene el carater \n y de esta forma se le pasa la direccion de memoria donde empieza 
+el array, y los arrays que mandan como punteros.
+(e): printf espera que el primer argumento sea un puntero de tipo const *char
+que seria el puntero de la cadena de texto que se le indica a printf para que la imprima
+esta es un array de tipo char, y cuando se le suministra de la forma "texto"
+realmente lo que hacemos es pasarle es el puntero de dicha cadena de texto.
+(h) putchar espera que se le pase un char, pero se le pasa un char *
+(i) puts espera un argumento const char *, se le pasa un char
+(j) puts ya pone un salto de linea, de esta forma, se imprimen dos saltos de linea

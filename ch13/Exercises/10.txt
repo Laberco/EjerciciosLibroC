@@ -1,0 +1,18 @@
+The following function supposedly creates an identical copy of a string. What's wrong with
+the function?
+
+char *duplicate(const char *p)
+{
+    char *q;
+
+    strcpy(q, p);
+    return q;
+}
+
+q se declara como un puntero a un char, pero no es inicializado de forma que de momento no apunta
+a ningun sitio en particular. Tenemos que inicializar el puntero para que apunte
+a un espacio de memoria lo suficientemente grande para acomodar la cadena que se quiere copiar
+incluido el caracter null.
+
+Para devolver una variable inicializada en una funcion, tambien tenemos que declararla estatica
+ya que de no ser asi, una vez termine la ejecuccion de la funcion, la variable desaparece.

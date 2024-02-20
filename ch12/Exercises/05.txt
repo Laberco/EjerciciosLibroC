@@ -1,0 +1,14 @@
+Suppose that a is a one-dimensional array and p is a pointer variable. Assuming that the
+assignment p = a has just been performed, which of the following expessions are illegal
+because of mismatched types? Of the remaining expressions, which are true (have a nonzero
+value)?
+
+p = a; // Hace que el puntero p apunte a la primera direccion del array a
+
+(a) p == a[0]  // Es ilegal, ya que estas comparando un puntero con el valor almacenado
+                // en a[0]
+(b) p == &a[0]  // Legal, comparas la posicion &a[0] con &a[0]
+(c) *p == a[0]  // Legal, comparas a[0] con a[0]
+(d) p[0] == a[0] // *(p + 0) se compara con a[0]
+
+Las expresiones que son true son la b, la c y la d

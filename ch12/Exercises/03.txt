@@ -1,0 +1,25 @@
+What will be the contents of the a array after the following statements are executed?
+
+#define N 10
+
+int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int *p = &a[0], *q = &a[N-1], temp;
+// p apunta al primer elemento de a y 1 apunta al ultimo elemento de a
+
+while (p < q) {
+    // Mientras p sea menor que q
+    temp = *p; // Guardamos el valor de p
+    *p++ = *q;  // Guardamos el valor de q en p y despues p se incrementa
+    *q-- = temp; // Guardamos en q el valor de temp y despues se decrementa
+}
+
+Primera interaccion
+p = &a[0], q = &a[9]
+temp = elemento en a[0](1)
+guarda en a[0] el elemento en a[9](10)
+p++, ahora p apunta a a[1]
+a[9] = 1
+q--, ahora q apunta a a[8]
+
+Se recorre el array hasta que ambos punteros se encuentran en el medio
+{10,9,8,7,6,5,4,3,2,1}

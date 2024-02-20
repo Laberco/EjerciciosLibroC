@@ -1,0 +1,19 @@
+Suppose that p has been declared as follows:
+
+char *p = "abc";
+
+Which of the following function calls are legal? Show the output produced by each legal
+call, and explain why the others are illegal.
+
+(a) putchar(p):
+Esta llamada es ilegal, ya que la funcion putchar espera que se le suministre un int y lo que
+hacemos es pasarte un puntero char *.
+
+(b) putchar(*p): Esta es legal, ya que lo que hacemos es desreferenciar el puntero p, de forma
+que lo que suministramos es el valor int del caracter que se encuentra en la posicion 0.
+
+(c): puts(p) espera que se le pase un const char *str, es decir, un string litteral, un puntero
+y una vez lo imprime, añade un salto de linea al final. Por lo tanto, es una llamada legal.
+
+(d): es ilegal, ya que lo que le estamos suministrando es, al desrefereniciar el puntero p,
+le suministramos el valor int del caracter que se encuentra en la posicion p[0]

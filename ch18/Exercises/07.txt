@@ -1,0 +1,20 @@
+una variable declarada como const indica que es una variable de solo lectura. Un programa
+puede haceder al valor de dicha variable pero no puede cambiarlo.
+
+
+(a) If x is of type int, it can be used as the value of a case label in a switch statement:
+Falso. Una variable const no puede ser utilizada en una expresion constante. Una sentencia
+switch requiere de una expresion constante, la cual tiene que ser conocida en tiempo 
+de compilacion y no en tiempo de ejecucion.
+
+(b) The compiler will check that no assigment is made of x:
+True. Como se trata de una variable de solo lectura, el compilador va a comprobar que no
+se haya intentado realizar instrucciones que intenten modificar el valor de x.
+
+(c) x is subject to the same scope rules as variables.
+True, los objectos const tienen las mismas scope rules que las variables. La unica forma
+de cambiar las scope rules de una variable es cambiando el lugar dentro del fichero donde
+se declaran.
+
+(d) x can be of any type.
+True. se pueden crear objectos de cualquier tipo.

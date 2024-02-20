@@ -1,0 +1,17 @@
+(a) char (*x[10])(int);
+    Se declara una variable de nombre x, la cual es un array de 10 elementos
+    donde cada elemento es un puntero a una función la cual tiene un unico argumento
+    de tipo int y esta funcion devuelve un tipo de dato char.
+
+(b) int (*x(int)[5]) 
+    Se declara una variable de nombre x la cual es una funcion que tiene un argumento
+    tipo int y devuelve un puntero de tipo int a un array de enteros con un tamaño de 5 elementos
+
+(c) float *(*x(void))(int);
+    x es una funcion sin argumentos que devuelve un puntero a una funcion con un argumento
+    tipo int que devuelve un puntero a un float.
+
+(d) void (*x(int, void *y)(int))(int);
+    x es una función con dos elementos, un entero y un puntero a una función que tiene un argumento
+    de tipo int y no devuelve nada. La funcion x devuelve un puntero a una funcion
+    que toma un argumento de tipo int y no devuelve nada

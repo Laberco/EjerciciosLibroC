@@ -1,0 +1,19 @@
+(a) Every variable with static stogae duration has file scope. Falso. Una variable puede
+ser static y estar declarada dentro de un  block de una función lo que haria que esta tuviese
+block scope
+
+(b) Every variable declared inside a function has no linkage:
+Se puede declarar una variable dentro de una función como extern, de forma
+que esta tendra:
+    - O internal linkage si la variable esta declarada como static antes en el file
+    - External linkage en cualquiera otra circustancia
+
+(c) Every variable with internal linkage has static storage duration:
+Cierto. La unica forma de que una variable tenga internal linkage es declararla static y esta 
+tiene que ser declarada fuera de una funcion.
+
+(d) Every parameter has block scope:
+True. Cualquiera variable declarada dentro de una funcion tiene block stocpe, lo que no puede ser cambiado.
+Como los argumentos son nuevas variables obtenidas de las copias creadas de los argumentos,
+estass sond eclaradas localmente a la funcion. La unica  forma de que una variable
+pueda tener file escope es si la vairable ha sido declarada fuera de la funcion. 

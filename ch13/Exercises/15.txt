@@ -1,0 +1,28 @@
+Let f be the following function:
+
+int f(char *s, char *t)
+{
+    char *p1, *p2;
+
+    for (p1 = s; *p1; p1++) {
+        // El primer for recorre la cadena s
+        for (p2 = t; *p2; p2++)
+        // el segundo bucle recorre la cadena t
+            if (*p1 == *p2) break;
+            // Si hay dos letras que coinciden, el bucle para
+        if (*p2 == '\0') break;
+        //Si ninguna letra coincide, se detiene la ejecucion del bucle
+        // de forma que p1 solo avanza si se encuentran letras iguales
+    }
+    return p1 - s;
+    
+}
+
+what is the value of f("abcd", "babc"):
+p1 apunta a s[3] y s apunta a s[0] = s[3] -s[0] = 3
+
+(b) What is the value of f("abcd", "bcd")?
+p1 apunta a a[0] - s[0] = 0
+
+(c) In general, what value does f return when passed two strings s and t?
+F devuelve un puntero al primer caracter de s e cual no aparece en la cadena t.

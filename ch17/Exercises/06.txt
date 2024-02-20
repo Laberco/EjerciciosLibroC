@@ -1,0 +1,15 @@
+Modify the delete_fromt_list function so that it only uses one pointer variable
+instead of two.
+
+structu node *delete_from_list(struct node *pp, int n){
+    struct node entry = *pp;
+
+    while(entry){ // Mientras no lleguemos al final 
+        if(entry->value == n) { // Cuando llegamoos al elemento que queremos eliminar
+            *pp = entry->next; // Modificamos el siguiente elemento de la lista
+            free(entry); // Eliminamos el elemento de la lista
+        }
+        pp = &entry->next; 
+        entry = entry->next;
+    }
+}

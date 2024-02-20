@@ -1,0 +1,11 @@
+int f(int i)
+{
+    static int j = 0;
+    return i * j++;
+}
+
+Primera llamada a f(10)
+vale 0
+
+Si se llama 5 veces
+vale 50

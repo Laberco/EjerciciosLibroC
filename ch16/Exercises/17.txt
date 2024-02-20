@@ -1,0 +1,12 @@
+Suppose that b and i are declared as follows:
+
+enum {FALSE, TRUE} b;
+int i;
+
+Which of the following statements are legal? Which ones are "safe" (always yield
+a meaningful result)?
+(a) legal
+(b) legal & unsafe, i puede estar fuera del rango de los valores del enumerados
+(c) legar & unsafe, b puede ser incrementada fuera de su rango
+(d) legar y seguro
+(e) legar y seguro

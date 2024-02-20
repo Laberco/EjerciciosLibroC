@@ -1,0 +1,12 @@
+struct node *find_last(structu node *list, int n){
+    struct node *p = NULL; // puntero que apunta a la ultima vez que aparecio n
+
+    while(list != NULL){
+        if(list->value == n)
+            p = list;
+        list = list->next_node;
+    }
+
+    return p; // p valdra NULL si no se encontro ningun elemento n, de esta forma nos ahoramos 
+    // tener que utilizar una sentencia if para evaluar
+}

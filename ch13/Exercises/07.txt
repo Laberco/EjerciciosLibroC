@@ -1,0 +1,12 @@
+Suppose that str is an array of characters. Which one of the following statements is not
+equivalent to the other three?
+
+(a) *str = 0; // Pone el caracter null en el inicio de la cadena, ya que 0 es el valor que tiene
+el caracter null
+(b) str[0] = '\0' // Coloca el caracter null al inicio de la cadena
+(c) strcpy(str, ""); //Copia el caracter null en la cadena str
+(d) strcat(str, ""); // Añade al final de la cadena el caracter null
+
+// el que se comporta de forma diferente es el d, ya que lo que hace es añadir al final de la 
+cadena el caracter null. El resto de instrucciones , lo que hacen es poner el caracter null en 
+el inicio de la cadena.

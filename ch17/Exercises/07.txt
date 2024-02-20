@@ -1,0 +1,36 @@
+The following loop is supposed to delete all nodes from a linked list and
+release the memory that they occupy. Unfortunately, the loop is incorrect.
+Explain what's wrong with it and how to fix the bug.
+
+for (p = first; p != NULL; p = p->next)
+    free(p);
+
+El problema es que estamos liberando la memoria auntada por p, de forma que cuando intentamos
+acceder p = p->next en la condicion del incremento va a dar fallo ya que p no apunta a ningun
+bloque de memoria. P es un dangling pointer.
+
+Para solucionarlo tenemos dos formas.
+
+Podemos crear un puntero temporal que guarde el valor de p.
+Podemos avanzar p al siguiente nodo y liberar la memoria apuntada por el puntero temporal
+ya que p no apunta a esa memoria:
+
+struct node *temp;
+
+while(p != NULL){
+    temp = p;
+    p = p->next;
+    free(temp);
+}
+
+Otra forma que podemos hacer es utilizando un puntero que apunte al proximo nodo,
+dandole el valor p->next. Despues liberamos la memoria apuntada por p y depues asignamos P
+el puntero al siguiente nodo de forma que p apunte al siguiente nodo
+
+struct node *next_node;
+
+while(p != NULL){
+    next_node = p;
+    free(p);
+    p = next_node;
+}

@@ -1,0 +1,11 @@
+int count_occurrences(struct node *list, int n){
+    // Tenemos que recorrer la lista y viendo las veces que aparece n
+    int cont = 0; // Contador para contar las veces que aparece n
+    while(list != NULL){
+        if(list->value == n)
+            cont++;
+        list = list->next;
+    }
+
+    return cont;
+}

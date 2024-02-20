@@ -1,0 +1,10 @@
+What will be the value of the string str after the following statements have been executed?
+
+strcpy(str, "tire-bounchon")
+str = tire-bounchon\0
+
+strcpy(&str[4], "d-or-wi")
+str = tired-or-wi\0
+
+strcat(str, "red?")
+str = tired-or-wired?\0

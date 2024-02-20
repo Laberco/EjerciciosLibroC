@@ -1,0 +1,15 @@
+extern float a;
+
+void f(register double b)
+{
+    static int c;
+    auto char d;
+}
+
+a: Tiene static storage duration. Tiene file scope y external linkage
+
+b: Tiene automatic storage duration. Tiene block scope y tiene none linkage
+
+c: Tiene static storage duration. Tiene block scope y tiene none linkage
+
+d: Tiene automatic storage duration. Tiene block scope y no tien elinkage

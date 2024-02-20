@@ -1,0 +1,24 @@
+Suppose that f and p are declared as follows:
+
+struct {
+    union {
+        char a, b;
+        int c;
+    } d;
+    int e[5];
+} f, *p = &f;
+
+Which of the following statements are legal?
+
+(a) p->b = ' '; Es ilegal, ya que no se indica a que elemento de la union queremos acceder.
+p->d.b = ' '; Seria la forma de utilizarlo
+
+(b) p->e[3] = 10; Es legal,
+
+(c) (*p).d.a = '*'; Es legal, ya que p es un puntero a la estructura f, y lo que hacemos 
+es desreferencial el puntero para poder acceder al valor de este
+
+(d) p->d->c = 20;  Utilizar -> es equivalente a utilizar (*p), lo que consiste en acceder al 
+valor apuntado por un puntero.
+En este caso es ilegal, ya que d no es un puntero, la instruccion correcta Seria
+p->d.c = 20;

@@ -1,0 +1,16 @@
+// Funcion original
+
+void print_part(struct part p)
+{
+    printf("Part number: %d\n, p.member);
+    printf("Part name: %s\n", p.name);
+    printf("Quantity on hand: %D\n", p.on_hand);
+}
+
+// Funcion modificada
+
+void print_part(struct part *p){
+    pritnf("Part number: %d\n p->member);
+    printf("Part name: %s\n"; p->name);
+    printf("Quantity on hand: %d\n", p->on_hand);
+}

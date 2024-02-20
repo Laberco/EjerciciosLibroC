@@ -1,0 +1,13 @@
+In the following declarations, the x and y structures have members named x and y:
+
+struct { int x, y; } x;
+struct { int x, y; } y;
+
+Are these declarations legal on an individual basis? Could both declarations appear as
+shown in a program?
+
+Son legales. Todas las variables declaradas dentro de una estructura tienen block scope, de 
+forma que las variables declaradas en una estructura no interfieren con las variables 
+declaradas en la otra estructura.Tambien esta bien que una variable dentro de una estructura
+tenga el mismo nombre que la propia estructura, ya que a forma de acceder a una variable de
+una estructura es de la forma x.x y se pueden diferenciar ambas.

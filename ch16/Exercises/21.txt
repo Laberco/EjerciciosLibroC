@@ -1,0 +1,7 @@
+What are the integer values of the enumeration constants in each of the following
+declarations?
+
+(a) 0 1 2 3
+(b) 11, 12, 13
+(c) 14, 15, 24, 25
+(d) 45, 46, 47, 37, 38, 39

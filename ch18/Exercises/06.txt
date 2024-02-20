@@ -1,0 +1,14 @@
+void print_error(const char *message)
+{
+    int n = 1;
+    printf("Error %d: %s\n", n++, message);
+}
+
+El problema es que n esta declarada como automatic, de forma que solo existe en la llamada de la funcion
+y no guarda su valor entre llamadas consecutivas a dicha funcion, para solcionarlo, tendriamos
+que declarar dicha variable como static
+
+void print_error(const char *message){
+    static int n = 1;
+    printf("Error %d: %s\n", n++, message);
+}

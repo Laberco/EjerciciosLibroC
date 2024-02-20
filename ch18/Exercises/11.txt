@@ -1,0 +1,8 @@
+int f(int)[]; /* Functions can't return arrays
+    int *f(int);
+
+int g(int)(int); /* Functions can't return functions
+    int (*g(int))(int);
+
+int a[10](int); /* Array elements can`t be functions
+    int (*a[10])(int);

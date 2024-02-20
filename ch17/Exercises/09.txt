@@ -1,0 +1,10 @@
+True or false: If x is a structure and a is a member of that structure, then
+(&x)->a is the same as x.a.
+
+Si que es lo mismo, ya que lo que hacemos con la instruccion (&x) es acceder a la direccion de memoria
+donde se guarda la estructura, es decir, un puntero. El operando -> no que hace
+es acceder al valor apuntado por un puntero de forma que estamos accediento 
+al valor almacenado en dicha estructura. Por lo tanto, si que es lo mismo.
+Tenemos que utilizar parentesis en (&x) ya que el operando -> tiene una preferencia
+mas alta que el operando &. Si no utilizasemos los parentesis seria evaluada como &(x->a) lo cual
+es idelag ya que x es una estructura, no un putero a una estructura.

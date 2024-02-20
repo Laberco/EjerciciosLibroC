@@ -1,0 +1,7 @@
+Which of the following statements about enumeration constants are true?
+(a) true
+(b) False, los enumerados pueden tener function/block scope, las #define coonstant pueden ser
+utilizadas en cualquier parte del programa.
+(c) true
+(d) False, pueden tener el mismo valor
+(e) True

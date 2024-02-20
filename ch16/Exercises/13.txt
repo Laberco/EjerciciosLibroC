@@ -1,0 +1,30 @@
+Suppose that s is the following structure (point is a structure tag declare in
+exercise 10):
+
+struct shape {
+    int shape_kind;
+    struct point center;
+    union {
+        struct {
+            int height, width;
+        } rectangle;
+        struct {
+            int radius;
+        } circle;
+    } u;
+} s;
+
+If the value of shape_kind is RECTANGLE, the height and width members store the
+dimensions of a rectangle. If the value of shape_kind is CIRCLE, the radius
+member stores the radius of a circle. Indicate which of the following 
+statements are legal, and show how to repair the ones that aren't:
+
+(a) s.shape_kind = RECTANGLE : Es legal, estamos indicanando que shape_kind es un valor el cual 
+estaria asignado previamente el macro RECTANGLE
+(b) s.center.x = 10; Es legarl, estamos asignando 10 a la cordenada x del centro del rectangulo
+(c) s.height = 25; Es ilegal, la forma correcta seria s.u.rectangle.height = 25;
+(d) s.u.rectangle.width = 8; Es legal
+(e) s.u.circle = 5; Ilegal, para reglarlo necesitamos varios pasos:
+    Primero, cambiar el shape para que sea un circulo: s.shape_kind = CIRCLE;
+    s.u.circle.radius = 5;
+(f) s.u.radius = 5; Ilegal s.u.circle.radius = 5;

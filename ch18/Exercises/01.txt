@@ -1,0 +1,27 @@
+(a) static char **lookup(int level)
+Storage class: Static. 
+Type qualifiers: None
+Type specifiers: Char
+Declarator: lookup
+Initializer: None
+
+(b) volatile unsigned long io_flags:
+Storage class: None
+Type qualifiers: Volatile
+Type specifiers: unsigned long
+Declarator: io_flags
+Initializer: None
+
+(c)extern char *file_name[MAX_FILES], path[];
+Storage class: Extern
+Type qualifiers: None
+Type specifiers: char *
+Declarator: file_name[MAX_FILES], path[]
+Initializer: None
+
+(d) static const char toke_buf[] = "";
+Storage class: Static
+Type qualifiers: Const
+Type specifiers: char
+Declarator: toke_buff[]
+Initializer: "";
